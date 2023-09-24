@@ -4,19 +4,14 @@ document.getElementById("divideBtn").addEventListener("click", function () {
     .trim()
     .split("\n")
     .filter((name) => name.trim() !== "");
-
-
-  console.log(names);
   if (names.length < 2) {
     alert("Por favor ingrese al menos 2 nombres.");
     return;
   }
 
-  const nuevoNames = names.sort(() => Math.random() - 0.5); // Mezclar los nombres aleatoriamente
+  const nuevoNames = names.sort(() => Math.random() - 0.5);
 
-  console.log(nuevoNames);
-
-  const numTeams = 2; // Cambia esto si deseas un número diferente de equipos
+  const numTeams = 2;
   const teamSize = Math.ceil(names.length / numTeams);
   const teams = [];
 
